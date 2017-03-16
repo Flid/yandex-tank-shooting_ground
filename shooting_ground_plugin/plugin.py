@@ -1,22 +1,13 @@
-import StringIO
-import copy
-import json
 import logging
-import time
-import os
-import pwd
-import socket
-import sys
 
 from yandextank.common.interfaces import (
     AbstractPlugin,
     MonitoringDataListener,
     AggregateResultListener,
-    AbstractInfoWidget,
 )
 from .client import ShootingGroundClient
 
-logger = logging.getLogger(__name__)  # pylint: disable=C0103
+logger = logging.getLogger(__name__)
 
 
 class Plugin(AbstractPlugin, AggregateResultListener, MonitoringDataListener):
